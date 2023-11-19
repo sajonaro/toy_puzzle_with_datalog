@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+
+  puzzle_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: puzzle_app

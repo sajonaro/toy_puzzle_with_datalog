@@ -1,0 +1,12 @@
+{:paths ["src" ]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}}
+ :aliases {
+   ;; Run with clj -M:run-m to launch the app locally (invoking main)
+   :run-m {:main-opts ["-m" "puzzle"]}
+   ;;clojure -T:uberjar
+   :uberjar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.1.278"}}
+             :exec-fn hf.depstar/uberjar
+             :exec-args {:aot true
+                         :jar "puzzle.jar"
+                         :main-class "puzzle"
+                         :sync-pom false}}}}
