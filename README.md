@@ -16,8 +16,8 @@ Following transition is impossible/invalid because we can't leave the Goat and t
 
 ```mermaid
 stateDiagram-v2
-[*] --> W,G,C|*,*,*
-W,G,C|*,*,* --> W,G,*|*,*,C 
+[*] --> {M,W,G,C}:{}
+{M,W,G,C}:{} --> {W,G}:|{M,C} 
 
 ```
 
